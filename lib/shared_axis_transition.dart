@@ -174,7 +174,6 @@ class _CourseSwitchState extends State<_CourseSwitch> {
 class _SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print("gggg");
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final double maxHeight = constraints.maxHeight;
