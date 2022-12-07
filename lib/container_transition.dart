@@ -450,7 +450,7 @@ class _InkWellOverlay extends StatelessWidget {
     this.openContainer,
     this.width,
     this.height,
-    this.child,
+    this.child
   });
 
   final VoidCallback? openContainer;
