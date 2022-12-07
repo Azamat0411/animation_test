@@ -1,40 +1,18 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-/// Signature for `action` callback function provided to [OpenContainer.openBuilder].
-///
-/// Parameter `returnValue` is the value which will be provided to [OpenContainer.onClosed]
-/// when `action` is called.
 typedef CloseContainerActionCallback<S> = void Function({S? returnValue});
 
-/// Signature for a function that creates a [Widget] in open state within an
-/// [OpenContainer].
-///
-/// The `action` callback provided to [OpenContainer.openBuilder] can be used
-/// to close the container.
 typedef OpenContainerBuilder<S> = Widget Function(
   BuildContext context,
   CloseContainerActionCallback<S> action,
 );
 
-/// Signature for a function that creates a [Widget] in closed state within an
-/// [OpenContainer].
-///
-/// The `action` callback provided to [OpenContainer.closedBuilder] can be used
-/// to open the container.
 typedef CloseContainerBuilder = Widget Function(
   BuildContext context,
   VoidCallback action,
 );
 
-/// The [OpenContainer] widget's fade transition type.
-///
-/// This determines the type of fade transition that the incoming and outgoing
-/// contents will use.
 enum ContainerTransitionType {
   /// Fades the incoming element in over the outgoing element.
   fade,

@@ -22,8 +22,7 @@ class _FadeThroughTransitionDemoState extends State<FadeThroughTransitionDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Fade through')),
-      body:
-      PageTransitionSwitcher(
+      body: PageTransitionSwitcher(
         transitionBuilder: (
           Widget child,
           Animation<double> animation,

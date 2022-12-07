@@ -250,6 +250,7 @@ class _OpenContainerTransformDemoState
           ),
         ),
         closedColor: Theme.of(context).colorScheme.secondary,
+
         closedBuilder: (BuildContext context, VoidCallback openContainer) {
           return SizedBox(
             height: _fabDimension,
